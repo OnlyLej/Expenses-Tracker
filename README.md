@@ -120,7 +120,7 @@ Go to Settings → Data Backup to:
 
 ## Supported Currencies
 
-Philippine Peso (₱), US Dollar ($), Euro (€), British Pound (£), Japanese Yen (¥), Korean Won (₩), Australian Dollar (A$), Canadian Dollar (C$), Swiss Franc (Fr), Indian Rupee (₹), Brazilian Real (R$), Turkish Lira (₺)
+Philippine Peso (₱), US Dollar, Euro (€), British Pound (£), Japanese Yen (¥), Korean Won (₩), Australian Dollar (A$), Canadian Dollar (C$), Swiss Franc (Fr), Indian Rupee (₹), Brazilian Real (R$), Turkish Lira (₺)
 
 ---
 
