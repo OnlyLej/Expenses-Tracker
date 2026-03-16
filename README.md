@@ -1,50 +1,127 @@
-# Welcome to your Expo app 👋
+# 💸 ExpenseTracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A personal expense tracking app built with React Native and Expo. Track your daily spending, set budgets, manage recurring bills, and visualize your financial habits — all stored locally on your device.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+### 📊 Overview
+- Monthly spending summary with budget progress bar
+- Category breakdown with over-goal alerts
+- Search and filter expenses by category
+- Export expense list as CSV
 
-2. Start the app
+### 📈 Analytics
+- Donut chart for category spending distribution
+- 6-month bar chart trend
+- Spending heatmap by day of month
+- Biggest expenses list
+- Streak tracker for daily logging
 
-   ```bash
-   npx expo start
-   ```
+### 🎯 Goals
+- Set per-category monthly spending limits
+- Visual progress bars with over/under indicators
 
-In the output, you'll find options to open the app in a
+### 📋 Reports
+- Monthly summary reports
+- Category-level breakdown
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🔁 Recurring
+- Set up recurring expenses (rent, subscriptions, bills)
+- Auto-added on the configured day of the month
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### ⚙️ Settings
+- Monthly budget configuration
+- Currency selector (12 currencies supported)
+- Dark / Light mode toggle
+- 8 color themes — Midnight, Ocean, Forest, Rose, Amber, Neon, Slate, Crimson
+- Daily reminder notifications with custom time picker
+- Backup & Restore — export and import all data and settings as a .json file
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## Tech Stack
 
+| Library | Purpose |
+|---|---|
+| Expo SDK 54 | App framework |
+| Expo Router | File-based navigation |
+| React Native Reanimated | Animations |
+| AsyncStorage | Local data persistence |
+| expo-notifications | Daily reminders |
+| expo-file-system | Backup file writing |
+| expo-sharing | Share backup files |
+| expo-document-picker | Import backup files |
+| expo-blur | Glassmorphism UI |
+| expo-haptics | Tactile feedback |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Expo CLI
+- EAS CLI (for builds)
+
+### Install dependencies
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Run in development
+```bash
+npx expo start
+```
 
-## Learn more
+> **Note:** Notifications require a development build — they do not work in Expo Go (SDK 53+).
 
-To learn more about developing your project with Expo, look at the following resources:
+### Build a development client
+```bash
+eas build --profile development --platform android
+npx expo start --dev-client
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Building
 
-Join our community of developers creating universal apps.
+### Production APK (Android)
+```bash
+eas build --profile production --platform android
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Preview APK (Android)
+```bash
+eas build --profile preview --platform android
+```
+
+### iOS
+```bash
+eas build --profile production --platform ios
+```
+
+---
+
+## Data & Privacy
+
+All data is stored locally on your device using AsyncStorage. No data is ever sent to any server. Backups are plain .json files you control entirely.
+
+---
+
+## Backup & Restore
+
+Go to Settings → Data Backup to:
+- **Export** — saves a .json file with all expenses, recurring items, goals, budget, currency, theme, and notification settings
+- **Import** — restores from a previously exported backup (replaces all current data)
+
+---
+
+## Supported Currencies
+
+Philippine Peso (₱), US Dollar ($), Euro (€), British Pound (£), Japanese Yen (¥), Korean Won (₩), Australian Dollar (A$), Canadian Dollar (C$), Swiss Franc (Fr), Indian Rupee (₹), Brazilian Real (R$), Turkish Lira (₺)
+
+---
+
+Made with ❤️ by Lejel
