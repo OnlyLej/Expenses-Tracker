@@ -1,17 +1,19 @@
 {
   "expo": {
-    "name": "ExpenseTracker",
+    "name": "Expense Tracker",
     "slug": "ExpenseTracker",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "expensetracker",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lejel.expensetracker"
     },
     "android": {
+      "package": "com.lejel.expensetracker",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -38,11 +40,25 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#ffffff"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "9973a29b-415f-47cb-8436-59d5716104cf"
+      }
     }
   }
 }
