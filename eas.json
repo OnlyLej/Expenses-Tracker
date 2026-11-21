@@ -7,18 +7,21 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
+      "bun": "latest",
       "env": {
         "EAS_BUILD_NO_EXPO_GO_WARNING": "true"
       }
     },
     "preview": {
       "distribution": "internal",
+      "bun": "latest",
       "android": {
         "buildType": "apk"
       }
     },
     "production": {
       "autoIncrement": true,
+      "bun": "latest",
       "android": {
         "buildType": "apk"
       },
