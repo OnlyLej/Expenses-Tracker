@@ -1,0 +1,30 @@
+name: Expo EAS Update
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Lets you trigger a run manually from the GitHub Actions tab
+
+jobs:
+  update:
+    name: Publish OTA Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Setup Expo & EAS
+        uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          packager: bun
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Publish update
+        run: eas update --auto --non-interactive
